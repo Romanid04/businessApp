@@ -9,6 +9,7 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
@@ -33,6 +34,15 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+private val LightColors = lightColorScheme(
+    primary = Color(0xFF6200EE),
+    onPrimary = Color.White,
+    primaryContainer = Color(0xFFBB86FC),
+    secondary = Color(0xFF03DAC5),
+    onSecondary = Color.Black
+)
+
+
 @Composable
 fun BusinessAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -51,7 +61,7 @@ fun BusinessAppTheme(
     }
 
     MaterialTheme(
-        colorScheme = colorScheme,
+        colorScheme = LightColors,
         typography = Typography,
         content = content
     )
